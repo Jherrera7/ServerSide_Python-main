@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Person Form</h1>
+    <p>Enter your First Name and Last Name:   </p>
+        <br>
+        <form action="/update" method="post">
+            <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_id">Identificación</span>
+                    <input type="text" class="form-control" name="id_person" aria-label="Sizing example input"
+                           aria-describedby="inputGroup_idt" value="">
+                </div>
+    
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_name">Primer nombre</span>
+                    <input type="text" class="form-control" name="first_name" aria-label="Sizing example input"
+                           aria-describedby="inputGroup_name" value="">
+                </div>
+    
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_lastName">Segundo nombre</span>
+                    <input type="text" class="form-control" name="last_name" aria-label="Sizing example input"
+                           aria-describedby="inputGroup_lastName" value="">
+                </div>
+                <br>
+                <input class="btn btn-primary" type="submit" name="form" value="Submit"/>
+            </form>
+</div>
+{% endblock %}
